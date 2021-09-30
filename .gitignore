@@ -1,0 +1,7 @@
+**node_modules
+.idea
+client/node_modules
+common/node_modules
+orders/node_modules
+payments/node_modules
+tickets/node_modules
