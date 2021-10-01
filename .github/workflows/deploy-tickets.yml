@@ -1,11 +1,11 @@
-name: deploy-auth
+name: deploy-tickets
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'auth/**'
+      - 'tickets/**'
       
 jobs:
   build:
@@ -16,10 +16,10 @@ jobs:
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-      - run: cd auth && docker build -t maksudik/auth .
-      - run: docker push maksudik/auth
+      - run: cd tickets && docker build -t maksudik/tickets .
+      - run: docker push maksudik/tickets
       - uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       - run: doctl kubernetes cluster kubeconfig save maksudik
-      - run: kubectl rollout restart deployment auth-depl
+      - run: kubectl rollout restart deployment tickets-depl

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: expiration
-          image: maksudikticketing/expiration
+          image: maksudik/expiration
           env:
             - name: NATS_URL
               value: 'http://nats-srv:4222'

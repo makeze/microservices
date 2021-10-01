@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: maksudikticketing/client
+          image: maksudik/client
 ---
 apiVersion: v1
 kind: Service
