@@ -23,7 +23,7 @@ interface TicketModel extends mongoose.Model<TicketDoc> {
     }): Promise<TicketDoc | null>;
 }
 
-const ticketSchema = new mongoose.Schema<TicketDoc>(
+const ticketSchema = new mongoose.Schema(
     {
         title: {
             type: String,
