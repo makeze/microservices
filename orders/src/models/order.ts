@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import { updateIfCurrentPlugin } from 'mongoose-update-if-current';
-import { OrderStatus } from '@cygnetops/common';
+import { OrderStatus } from '@maxytick/common';
 import { TicketDoc } from './ticket';
 
 export { OrderStatus };
